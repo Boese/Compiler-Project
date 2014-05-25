@@ -62,7 +62,7 @@ Statement Back Back;number
 Statement Right Right;number
 Statement Left Left;number
 Statement Create Create;number
-Statement If If;(;color;==;colorcode;);[;Statlist;];[;Statlist;]
+Statement If If;(;Color;==;colorcode;);[;Statlist;];[;Statlist;]
 Statement SetColor SetColor;colorcode
 Statement Repeat Repeat;number;[;Statlist;]
 Statement Define Define;id;Statlist;End
@@ -90,6 +90,54 @@ If (Color == pink ) [ Setcolor red ] [ Setcolor blue]
 Define drawbox Repeat 4 [Forward 10 Right 90] End  
                 //define a drawbox function with a repeat command in it  
 Call drawbox    //call the drawbox function  
+```
+___
+Tokenized Example Format:
+===
+```
+Create     Create
+10         number
+Penup      Penup
+Forward    Forward
+10         number
+Pendown    Pendown
+Right      Right
+90         number
+Repeat     Repeat
+4          number
+[          [
+Forward    Forward
+10         number
+Right      Right
+90         number
+]          ]
+If         If
+(          (
+Color      Color
+==         ==
+pink       colorcode
+)          )
+[          [
+SetColor   SetColor
+red        colorcode
+]          ]
+[          [
+SetColor   SetColor
+blue       colorcode
+]          ]
+Define     Define
+drawbox    id
+Repeat     Repeat
+4          number
+[          [
+Forward    Forward
+10         number
+Right      Right
+90         number
+]          ]
+End        End
+Call       Call
+drawbox    id
 ```
 ___
 Project Requirements:
