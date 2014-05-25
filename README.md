@@ -57,24 +57,24 @@ Statlist End lambda
 Statlist $ lambda
 Statement Penup Penup
 Statement Pendown Pendown
-Statement Forward Forward;number
-Statement Back Back;number
-Statement Right Right;number
-Statement Left Left;number
-Statement Create Create;number
+Statement Forward Forward;Number
+Statement Back Back;Number
+Statement Right Right;Number
+Statement Left Left;Number
+Statement Create Create;Number
 Statement If If;(;Color;==;colorcode;);[;Statlist;];[;Statlist;]
 Statement SetColor SetColor;colorcode
-Statement Repeat Repeat;number;[;Statlist;]
-Statement Define Define;id;Statlist;End
-Statement Call Call;id
+Statement Repeat Repeat;Number;[;Statlist;]
+Statement Define Define;Id;Statlist;End
+Statement Call Call;Id
 ```
 ___
 Here is an example program:
 ===
 ```
 Create 10       //this creates 10 turtles at random locations on the  
-                //screen.  Each turtle is also given a random color  
-				        //Each turtle is also facing a random direction  
+                //screen.  Each turtle is also given a random color
+                //Each turtle is also facing a random direction  
 Penup           // do not draw with turtle movement  
 Forward 10      // move all turtles on the screen 10 pixels in the  
                 // direction that they are headed  
@@ -96,20 +96,20 @@ Tokenized Example Format:
 ===
 ```
 Create     Create
-10         number
+10         Number
 Penup      Penup
 Forward    Forward
-10         number
+10         Number
 Pendown    Pendown
 Right      Right
-90         number
+90         Number
 Repeat     Repeat
-4          number
+4          Number
 [          [
 Forward    Forward
-10         number
+10         Number
 Right      Right
-90         number
+90         Number
 ]          ]
 If         If
 (          (
@@ -126,18 +126,18 @@ SetColor   SetColor
 blue       colorcode
 ]          ]
 Define     Define
-drawbox    id
+drawbox    Id
 Repeat     Repeat
-4          number
+4          Number
 [          [
 Forward    Forward
-10         number
+10         Number
 Right      Right
-90         number
+90         Number
 ]          ]
 End        End
 Call       Call
-drawbox    id
+drawbox    Id
 ```
 ___
 Project Requirements:
