@@ -4,21 +4,23 @@ For this option, you need to write a lexical analyzer and parser for a language 
 ___
 Starting Logo320 Grammar:
 ===
-1. Program -> Statement  Statlist  
-2. Statlist -> Statement Statlist  
-3. Statlist -> lambda  
-4. Statement -> 	Penup |  
-  * Pendown |  
-  * Forward number |  
-  * Back number |  
-  * Right number |  
-  * Left number |  
-  * Create number |  
-  * If (Color == colorCode ) [ Statlist ] [ Statlist]|  
-  * Setcolor colorCode |  
-  * Repeat number [ Statlist ]|  
-  * Define ID Statlist End |  
-  * Call ID  
+```
+Program   -> Statement  Statlist  
+Statlist  -> Statement Statlist  
+Statlist  -> lambda  
+Statement -> 	Penup
+          | Pendown
+          | Forward number
+          | Back number
+          | Right number
+          | Left number
+          | Create number
+          | If (Color == colorCode ) [ Statlist ] [ Statlist]
+          | Setcolor colorCode
+          | Repeat number [ Statlist ]
+          | Define ID Statlist End
+          | Call ID
+```
 
 number is just an integer  
 colorCode is a list of possible colors.  You can make your own list.  Some example colors include red, blue, black, green, yellow, purple, pink. 
