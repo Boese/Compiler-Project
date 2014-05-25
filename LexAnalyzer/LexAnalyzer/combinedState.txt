@@ -1,0 +1,17 @@
+Operator Integer Identifier Double Symbol
+Start 0123456789 Integer
+Start abcdefghijklmnopqrstuvwxyz_ Identifier
+Start (){}[];"'#? Symbol
+Start +-*/%=<>!&|^~,. Operator
+Integer . Double
+Integer 0123456789 Integer
+Double . Invalid
+Double 0123456789 Double
+Integer abcdefghijklmnopqrstuvwxyz_ Invalid
+Double abcdefghijklmnopqrstuvwxyz_ Invalid
+Integer +-*/%=<>!&|^~, Operator
+Double +-*/%=<>!&|^~, Operator
+Identifier +-*/%=<>!&|^~,. Operator
+Integer (){}[];"'#? Symbol
+Double (){}[];"'#? Symbol
+Identifier (){}[];"'#? Symbol
