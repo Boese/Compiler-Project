@@ -1,9 +1,9 @@
 Compiler-Project
 ================
 For this option, you need to write a lexical analyzer and parser for a language called Logo320.  Logo320 is a subset of Logo language that controls “turtles” on the screen.  You can write programs to create graphics using these turtles. 
-
-Starting Logo320 Grammar:  
-
+___
+Starting Logo320 Grammar:
+===
 1. Program -> Statement  Statlist  
 2. Statlist -> Statement Statlist  
 3. Statlist -> lambda  
@@ -24,8 +24,53 @@ number is just an integer
 colorCode is a list of possible colors.  You can make your own list.  Some example colors include red, blue, black, green, yellow, purple, pink. 
 ID is any combination of letters and digits but it must start with a letter. 
 Bold are keywords. 
-
+___
+Completed LL(1) Parse Table:
+===
+```
+Program Penup Statement;Statlist
+Program Pendown Statement;Statlist
+Program Forward Statement;Statlist
+Program Back Statement;Statlist
+Program Right Statement;Statlist
+Program Left Statement;Statlist
+Program Create Statement;Statlist
+Program If Statement;Statlist
+Program SetColor Statement;Statlist
+Program Repeat Statement;Statlist
+Program Define Statement;Statlist
+Program Call Statement;Statlist
+Statlist Penup Statement;Statlist
+Statlist Pendown Statement;Statlist
+Statlist Forward Statement;Statlist
+Statlist Back Statement;Statlist
+Statlist Right Statement;Statlist
+Statlist Left Statement;Statlist
+Statlist Create Statement;Statlist
+Statlist If Statement;Statlist
+Statlist SetColor Statement;Statlist
+Statlist Repeat Statement;Statlist
+Statlist Define Statement;Statlist
+Statlist Call Statement;Statlist
+Statlist ] lambda
+Statlist End lambda
+Statlist $ lambda
+Statement Penup Penup
+Statement Pendown Pendown
+Statement Forward Forward;number
+Statement Back Back;number
+Statement Right Right;number
+Statement Left Left;number
+Statement Create Create;number
+Statement If If;(;color;==;colorcode;);[;Statlist;];[;Statlist;]
+Statement SetColor SetColor;colorcode
+Statement Repeat Repeat;number;[;Statlist;]
+Statement Define Define;id;Statlist;End
+Statement Call Call;id
+```
+___
 Here is an example program:
+===
 ```
 Create 10       //this creates 10 turtles at random locations on the  
                 //screen.  Each turtle is also given a random color  
@@ -46,8 +91,9 @@ Define drawbox Repeat 4 [Forward 10 Right 90] End
                 //define a drawbox function with a repeat command in it  
 Call drawbox    //call the drawbox function  
 ```
-
-Project Requirements:  
+___
+Project Requirements:
+===
 1. Implement a lexical analyzer to tokenize the Logo320 program.  
 2. Implement a parser to check the syntax of the language (you can use either recursive descent or LL(1))  
 3. Construct a parse tree to save all the commands recognized in the parser.  
