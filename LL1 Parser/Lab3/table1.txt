@@ -32,7 +32,7 @@ Statement Back Back;number
 Statement Right Right;number
 Statement Left Left;number
 Statement Create Create;number
-Statement If If;(;color;==;colorcode;);[;Statlist;];[;Statlist;]
+Statement If If;(;Color;==;colorcode;);[;Statlist;];[;Statlist;]
 Statement SetColor SetColor;colorcode
 Statement Repeat Repeat;number;[;Statlist;]
 Statement Define Define;id;Statlist;End

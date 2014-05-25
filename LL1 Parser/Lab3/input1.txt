@@ -16,7 +16,7 @@ Right		Right
 ]		]
 If		If
 (		(
-Color		color
+Color		Color
 ==		==
 pink		colorcode
 )		)
