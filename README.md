@@ -8,7 +8,7 @@ Starting Logo320 Grammar:
 Program   -> Statement  Statlist  
 Statlist  -> Statement Statlist  
 Statlist  -> lambda  
-Statement -> 	Penup
+Statement -> Penup
           | Pendown
           | Forward number
           | Back number
