@@ -45,7 +45,7 @@ Completed LL(1) Parse Table:
 ===
 
 |	   | Program            | Statlist           | Statement                                           |
-|:----------:|:------------------:|:------------------:|:---------------------------------------------------:|
+|:----------:|:------------------:|:------------------:|:----------------------------------------------------|
 |**Penup**   | Statement Statlist | Statement Statlist | Penup                                               |
 |**Pendown** | Statement Statlist | Statement Statlist | Pendown                                             |
 |**Forward** | Statement Statlist | Statement Statlist | Forward number                                      |
