@@ -39,6 +39,7 @@ void Tokenizer::setKeywords()
 	}
 }
 
+//Set all the colors from "colors.txt" to m_colors vector
 void Tokenizer::setColors()
 {
 	try
@@ -76,6 +77,7 @@ struct  isKeyword : public  binary_function<string, string, bool>
 	}
 };
 
+//******Helper function: This binary_functions is used to help StateMachine::Tokenize()*****//
 struct  isColor : public  binary_function<string, string, bool>
 {
 	bool  operator()(const string  &keyword, const string  &var)  const
