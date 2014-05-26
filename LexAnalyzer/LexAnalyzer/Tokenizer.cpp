@@ -156,12 +156,14 @@ void Tokenizer::Tokenize()
 			}
 		}
 
+		ofstream outFile("output.txt");  // opens output.txt for writing
 		//Print Tokens & save to file
 		for (unsigned int i = 0; i < temp.size(); i++) {
-			for (unsigned int j = 0; j < temp[i].size(); j++)
+			for (unsigned int j = 0; j < temp[i].size(); j++) {
 				cout << left << setw(20) << temp[i][j].getVar() << " " << temp[i][j].getType() << endl;
+				outFile << left << setw(20) << temp[i][j].getVar() << " " << temp[i][j].getType() << endl;
+			}
 		}
-
 
 	}
 		
