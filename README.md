@@ -44,23 +44,23 @@ ___
 Completed LL(1) Parse Table:
 ===
 
-|	| Program            | Statlist           | Statement                                           |
-|:-------:|:------------------:|:------------------:|:---------------------------------------------------:|
-|Penup	| Statement Statlist | Statement Statlist | Penup                                               |
-|Pendown	| Statement Statlist | Statement Statlist | Pendown                                             |
-|Forward	| Statement Statlist | Statement Statlist | Forward number                                      |
-|Back	| Statement Statlist | Statement Statlist | Back number                                         |
-|Right	| Statement Statlist | Statement Statlist | Right number                                        |
-|Left	| Statement Statlist | Statement Statlist | Left number                                         |
-|Create	| Statement Statlist | Statement Statlist | Create number                                       |
-|If	| Statement Statlist | Statement Statlist | If ( color == colorcode ) [ Statlist ] [ Statlist ] |
-|SetColor	| Statement Statlist | Statement Statlist | SetColor colorcode                                  |
-|Repeat	| Statement Statlist | Statement Statlist | Repeat number [ Statlist ]                          |
-|Define	| Statement Statlist | Statement Statlist | Define id Statlist End                              |
-|Call	| Statement Statlist | Statement Statlist | Call id                                             |
-|]	|	           | lambda	            |                                                     |
-|End	|	           | lambda	            |                                                     |
-|$	|	           | lambda	            |                                                     |
+|	   | Program            | Statlist           | Statement                                           |
+|:----------:|:------------------:|:------------------:|:---------------------------------------------------:|
+|**Penup**   | Statement Statlist | Statement Statlist | Penup                                               |
+|**Pendown** | Statement Statlist | Statement Statlist | Pendown                                             |
+|**Forward** | Statement Statlist | Statement Statlist | Forward number                                      |
+|**Back**	   | Statement Statlist | Statement Statlist | Back number                                         |
+|**Right**   | Statement Statlist | Statement Statlist | Right number                                        |
+|**Left**	   | Statement Statlist | Statement Statlist | Left number                                         |
+|**Create**  | Statement Statlist | Statement Statlist | Create number                                       |
+|**If**	   | Statement Statlist | Statement Statlist | If ( color == colorcode ) [ Statlist ] [ Statlist ] |
+|**SetColor**| Statement Statlist | Statement Statlist | SetColor colorcode                                  |
+|**Repeat**  | Statement Statlist | Statement Statlist | Repeat number [ Statlist ]                          |
+|**Define**  | Statement Statlist | Statement Statlist | Define id Statlist End                              |
+|**Call**	   | Statement Statlist | Statement Statlist | Call id                                             |
+|**]**	   |	              | lambda	     |                                                     |
+|**End**	   |	              | lambda	     |                                                     |
+|**$**	   |	              | lambda	     |                                                     |
  
 ___
 Parser Table Input File:
