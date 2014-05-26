@@ -14,18 +14,18 @@ void main()
 	string tableFile, inputFile, startRule;
 
 	// Have user input a file to be processed.
-	cout << "Enter the name of table file: ";
-	cin >> tableFile;
-	//tableFile = "table1.txt";
-	cout << endl;
-	cout << "Enter the name of input file: ";
-	cin >> inputFile;
-	//inputFile = "input1.txt";
-	cout << endl;
-	cout << "Enter the start rule (1: Program): ";
-	cin >> startRule;
-	//startRule = "Program";
-	cout << endl;
+	//cout << "Enter the name of table file: ";
+	//cin >> tableFile;
+	tableFile = "table1.txt";
+	//cout << endl;
+	//cout << "Enter the name of input file: ";
+	//cin >> inputFile;
+	inputFile = "input2.txt";
+	//cout << endl;
+	//cout << "Enter the start rule (1: Program): ";
+	//cin >> startRule;
+	startRule = "Program";
+	//cout << endl;
 
 	try
 	{
@@ -66,7 +66,7 @@ void main()
 			getline( inFile, buff );
 			parser.addInputEntry(buff);
 		}
-		parser.addInputEntry("$");
+		parser.addInputEntry("$ $");
 		inFile.close();
 	}
 	// Oops something went wrong.
@@ -75,9 +75,9 @@ void main()
 		cout << "Error number: " << e << ", File not found" << endl;
 	}
 
-	parser.startRule(startRule);
+	//parser.startRule(startRule);
 
-	if (parser.parse())
+	if (parser.parse(startRule))
 		cout << "Parsed successfully." << endl;
 	else
 		cout << "Failed to Parse." << endl;

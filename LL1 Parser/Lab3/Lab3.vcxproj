@@ -81,6 +81,7 @@
   <ItemGroup>
     <ClInclude Include="cParser.h" />
     <ClInclude Include="cTable.h" />
+    <ClInclude Include="RDP.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cParser.cpp" />
