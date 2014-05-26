@@ -1,8 +1,10 @@
 Compiler-Project
 ================
-For this option, you need to write a lexical analyzer and parser for a language called Logo320.  Logo320 is a subset of Logo language that controls “turtles” on the screen.  You can write programs to create graphics using these turtles. 
+For this option, you need to write a lexical analyzer and parser for a language called Logo320.  
+Logo320 is a subset of Logo language that controls “turtles” on the screen.  
+You can write programs to create graphics using these turtles. 
 ___
-Starting Logo320 Grammar:
+Logo320 Grammar:
 ===
 ```
 Program   -> Statement  Statlist  
@@ -10,22 +12,22 @@ Statlist  -> Statement Statlist
 Statlist  -> lambda  
 Statement -> Penup
           | Pendown
-          | Forward number
-          | Back number
-          | Right number
-          | Left number
-          | Create number
-          | If (Color == colorCode ) [ Statlist ] [ Statlist]
-          | Setcolor colorCode
-          | Repeat number [ Statlist ]
-          | Define ID Statlist End
-          | Call ID
+          | Forward Number
+          | Back Number
+          | Right Number
+          | Left Number
+          | Create Number
+          | If (Color == colorcode ) [ Statlist ] [ Statlist]
+          | Setcolor colorcode
+          | Repeat Number [ Statlist ]
+          | Define Id Statlist End
+          | Call Id
 ```
 
-number is just an integer  
-colorCode is a list of possible colors.  You can make your own list.  Some example colors include red, blue, black, green, yellow, purple, pink. 
-ID is any combination of letters and digits but it must start with a letter. 
-Bold are keywords. 
+ *  Number is just an integer.  
+ *  colorcode is a list of possible colors.   
+ *  Id is any combination of letters and digits but it must start with a letter.  
+
 ___
 Completed LL(1) Parse Table:
 ===
