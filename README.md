@@ -28,6 +28,18 @@ Statement -> Penup
  *  colorcode is a list of possible colors.   
  *  Id is any combination of letters and digits but it must start with a letter.  
 
+<h4>Valid colors in colorcode:</h4>
+```
+blue
+green
+black
+pink
+yellow
+orange
+red
+white
+purple
+```
 ___
 Completed LL(1) Parse Table:
 ===
