@@ -1,0 +1,14 @@
+Id Number Symbol
+Start 0123456789 Number
+Start abcdefghijklmnopqrstuvwxyz Id
+Start = Equal
+Start []() Symbol
+Equal = Symbol
+Equal abcdefghijklmnopqrstuvwxyz0123456789[]() Invalid
+Number 0123456789 Number
+Number abcdefghijklmnopqrstuvwxyz Invalid
+Number []() Symbol
+Number = Equal
+Id abcdefghijklmnopqrstuvwxyz0123456789 Id
+Id []() Symbol
+Id = Equal

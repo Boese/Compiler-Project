@@ -1,0 +1,14 @@
+Penup
+Pendown
+Forward
+Back
+Right
+Left
+Create
+If
+Color
+Setcolor
+Repeat
+Define
+Call
+End

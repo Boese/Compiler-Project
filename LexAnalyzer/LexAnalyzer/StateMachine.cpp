@@ -152,27 +152,27 @@ vector<Token> StateMachine::testString(const string &userString)
 	//loop through every character of userString
 	for (unsigned int i = 0; i < userString.length(); i++)
 	{
-		//	if next state is Operator
-		if (getNext(m_currentState, userString[i]).compare("Operator") == 0)
+		//	if next state is Equal
+		if (getNext(m_currentState, userString[i]).compare("Equal") == 0)
 		{
 			//make sure temp_Token isn't empty
 			//append current token
 			if (temp_Token.length() > 0)
-				tokens.push_back(Token(temp_Token, m_currentState));
+				tokens.push_back(Token(temp_Token, "Invalid"));
 
 			temp_Token_Counter = 0;	//set counter to 0
 
 			//check if token is single or double operator(++)
-			if (getNext(m_currentState, userString[i + 1]).compare("Operator") == 0) {
-				tokens.push_back(Token(userString.substr(i, 2), "Operator")); i++;
+			if (getNext("Equal", userString[i + 1]).compare("Symbol") == 0) {
+				tokens.push_back(Token(userString.substr(i, 2), userString.substr(i, 2))); i++;
 			}
 			else
-				tokens.push_back(Token(userString.substr(i, 1), "Operator"));
+				tokens.push_back(Token(userString.substr(i, 1), "Invalid"));
 
 			temp_Token.clear(); continue;	//clear temp_Token and continue
 		}
 
-		//	if next state is a symbol 
+			//if next state is a symbol 
 		if (getNext(m_currentState, userString[i]).compare("Symbol") == 0)
 		{
 			//make sure temp_Token isn't empty
@@ -181,7 +181,7 @@ vector<Token> StateMachine::testString(const string &userString)
 				tokens.push_back(Token(temp_Token, m_currentState));
 
 			temp_Token_Counter = 0;	//set counter to 0
-			tokens.push_back(Token(userString.substr(i, 1), "Symbol")); //append Symbol Token
+			tokens.push_back(Token(userString.substr(i, 1), userString.substr(i, 1))); //append Symbol Token
 			temp_Token.clear(); continue;	//clear temp_Token and continue
 		}
 

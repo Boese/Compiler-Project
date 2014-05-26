@@ -37,9 +37,11 @@ public:
 	//	call Tokenize()
 	Tokenizer();
 	vector<string> m_keywords;	//keywords for Tokenizer
+	vector<string> m_colors;
 
 private:
 	void setKeywords();		//set m_keywords from "keywords.txt"
+	void setColors();
 	void Tokenize();		//Tokenize input file "myFile.txt"
 	
 };

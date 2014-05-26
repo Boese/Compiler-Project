@@ -1,0 +1,17 @@
+Create 10
+
+Penup
+
+Forward 10
+
+Pendown
+
+Right 90
+
+Repeat 4 [Forward 10 Right 90 ]
+
+If (Color == pink ) [ Setcolor red ] [ Setcolor blue]
+
+Define drawbox Repeat 4 [Forward 10 Right 90] End
+
+Call drawbox
