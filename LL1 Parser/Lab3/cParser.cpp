@@ -2,6 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include <string>
 
 #define fileOpenFailure_ 0;		// Execption Handler
 
@@ -67,11 +68,9 @@ void cParser::writeTree(const string entry, int col)
 
 bool cParser::parse(const string rule)
 {
-	int col = 0;
-
 	startRule(rule);
 
-	cout << m_stack.top() << "col: " << col << endl;
+	cout << m_stack.top() << endl;
 	while (!m_stack.empty() && !m_input.empty())
 	{
 		//[a, a]
@@ -79,8 +78,7 @@ bool cParser::parse(const string rule)
 		{
 			//cout << "\n[ " << m_stack.top() << ", " << m_input.front().m_value << " ]"
 				//<< " Action: pop stack, pop input.\n" << endl;
-			cout << m_input.front().m_value << " col: " << col << endl;
-			//writeTree(m_stack.top(), col);
+			cout << m_input.front().m_value << endl;
 			m_stack.pop();
 			m_input.pop();
 		}
@@ -100,21 +98,19 @@ bool cParser::parse(const string rule)
 							 //<< " Action: pop stack.\n" << endl;
 						//cout << m_stack.top() << endl;
 						m_stack.pop();
-						col--;
 						vector<string>::const_reverse_iterator itr = iter.getRule().rbegin();
 						for ( ; itr != iter.getRule().rend() ; itr++)
 						{
 							if (*itr != "lambda")
 							{
-								col++;
 								m_stack.push(*itr);
 								//cout << "Pushed " << *itr << " to stack." << endl;
-								cout << m_stack.top() << " col: " << col << " ";
+								cout << m_stack.top() << endl;
 							}
 							else
 							{
 								//cout << "lambda case pop stack. Col: " << endl;
-								cout << "lambda, col: " << col << " ";
+								cout << "lambda" << endl;
 							}
 						}
 						cout << endl;
